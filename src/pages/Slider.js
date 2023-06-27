@@ -4,8 +4,8 @@ export default function Slider({ images }) {
   const [index, setIndex] = useState(0);
 
   const sliderStyle = {
-    width: "400px",
-    height: "300px",
+    width: "500px",
+    height: "400px",
     borderRadius: "15px",
     backgroundColor:"brown",
     backgroundImage: `url(${images[index].url})`,
@@ -15,16 +15,28 @@ export default function Slider({ images }) {
   };
 
   const leftSlider = {
-    backgroundImage: "url(/image/left.png",
+    width:"50px",
+    height:"50px",
+    backgroundImage: "url(/image/left.png)",
     backgroundSize: "cover",
     cursor: "pointer",
     zIndex: 1,
+    position:'absolute',
+    left:0,
+    top:"50%",
+    transform:"translate(0,-50%)"
   };
   const rightSlider = {
-    backgroundImage: "url(/image/right.png",
+    width:"50px",
+    height:"50px",
+    backgroundImage: "url(/image/right.png)",
     backgroundSize: "cover",
     cursor: "pointer",
     zIndex: 1,
+    position:'absolute',
+    right:0,
+    top:"50%",
+    transform:"translate(0,-50%)"
   };
   return (
     <div style={sliderStyle}>
